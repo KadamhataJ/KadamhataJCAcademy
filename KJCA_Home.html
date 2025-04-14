@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="Image/KJCA_LOGO-01.jpg" type="image/x-icon">
+   <title>KJCA-Kadamhata J.C Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .secOne {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .imgbox {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .imgbox img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .secOnedouble {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .imgboxdouble {
+            flex: 1;
+        }
+
+        .imgboxdouble img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+        }
+
+        .headtext {
+            flex: 2;
+        }
+
+        .headtext h1 {
+            font-size: 40px;
+            color: saddlebrown;
+            line-height: 1.2;
+        }
+
+        .secTwo, .secThree, .secFour, .secFive, .secSix {
+            padding: 20px;
+        }
+
+        .secTwo h3, .secThree h3, .secFour h3, .secFive h3, .secSix h3, .secSeven h3, .secEight h3 {
+            background-color: saddlebrown;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .secTwo p, .secThree p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .secThree {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .textboxone, .textboxtow {
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .textboxone h4, .textboxtow h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .secFour table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .secFour table tr {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        .secFour table tr td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .secFour table tr td:first-child {
+            width: 40%;
+        }
+
+        .secFour table tr td:last-child {
+            width: 60%;
+        }
+
+        .secFive {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .staff-card {
+            width: 100%;
+            max-width: 300px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .staff-card img {
+            width: 150px;
+            height: 150px;
+            border: 2px dotted saddlebrown;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .staff-card h4 {
+            font-size: 20px;
+            color: saddlebrown;
+            margin-bottom: 5px;
+        }
+
+        .staff-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* News scroll above footer */
+        .news-scroll {
+            width: 100%;
+            background-color: rgba(246, 250, 3, 0.973);
+            color: rgb(250, 7, 7);
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            bottom: 80px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        /* Student and Staff Info Section */
+        .secSix {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .secSix h3 {
+            width: 100%;
+        }
+
+        .info-card {
+            width: 100%;
+            max-width: 300px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .info-card h4 {
+            font-size: 24px;
+            color: saddlebrown;
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+         /* Contact Information Section */
+         .secSeven {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .secSeven h3 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .secSeven p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .secSeven i {
+            color: saddlebrown;
+            margin-right: 10px;
+        }
+
+
+    .secEight {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .secEight h3 {
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .info-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .info-card {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .info-card h4 {
+        color:saddlebrown;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .info-card p {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+    }
+
+
+    .info-card button {
+        background-color: saddlebrown;
+        color: white;
+        border: none;
+        text-align: center;
+        margin: 10px;
+        padding: 10px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    .info-card button a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background-color: saddlebrown;
+        color: white;
+        position: relative;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 576px) {
+        .secOne {
+            flex-direction: row;
+        }
+        
+        .imgbox {
+            margin-bottom: 0;
+        }
+        
+        .secThree {
+            flex-direction: row;
+        }
+        
+        .textboxone, .textboxtow {
+            width: 48%;
+        }
+        
+        .secSix {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        
+        .info-card {
+            width: 30%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .staff-card {
+            width: 45%;
+        }
+        
+        .secEight {
+            padding: 15px;
+        }
+        
+        .secEight h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .info-cards-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .info-card {
+            padding: 15px;
+        }
+        
+        .info-card h4 {
+            font-size: 16px;
+        }
+        
+        .info-card button {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .staff-card {
+            width: 30%;
+        }
+        
+        .info-cards-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .staff-card {
+            width: 28%;
+        }
+        
+        .info-cards-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .headtext h1 {
+            font-size: 28px;
+        }
+        
+        .secEight h3 {
+            font-size: 20px;
+        }
+        
+        .secTwo p, .secThree p {
+            font-size: 16px;
+        }
+        
+        .textboxone h4, .textboxtow h4 {
+            font-size: 18px;
+        }
+        
+        .info-card h4 {
+            font-size: 20px;
+        }
+        
+        .info-card p {
+            font-size: 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <section class="secOne">
+        <div class="imgbox">
+            <img src="Image/KJCA_LOGO-02.jpg" alt="logo">
+        </div>
+        <div class="headtext">
+            <h1>Kadamhata J.C Academy <br> কদমহাটা জে.সি একাডেমি</h1>
+        </div>
+    </section>
+
+    <section class="secOnedouble">
+        <div class="imgboxdouble">
+            <img src="Image/Kadamhata_JC_Achievement.jpg" alt="logo">
+        </div>
+        
+    </section>
+
+    <section class="secTwo">
+        <h3>About us (আমাদের সম্পর্কে কিছু কথা)</h3>
+        <p>কদমহাটা জে.সি. একাডেমি, একটি প্রাইভেট কিন্ডারগার্টেন স্কুল এবং ভাষা শিক্ষা প্রতিষ্ঠান হিসেবে ২০২২ সালের জানুয়ারি মাসে আনুষ্ঠানিকভাবে যাত্রা শুরু করে। প্রতিষ্ঠানটি মৌলভীবাজার জেলার রাজনগর উপজেলার পশ্চিম কদমহাটা বাজারসংলগ্ন এক মনোরম ও সহজলভ্য স্থানে অবস্থিত। শুরু থেকেই একাডেমির লক্ষ্য ছিল এমন একটি শিক্ষাবান্ধব ও মানসম্পন্ন শিক্ষার পরিবেশ গড়ে তোলা, যেখানে শিশুদের প্রাথমিক শিক্ষা জীবন আনন্দময়, অর্থবহ এবং কার্যকর হয়।
+
+            আমরা বিশ্বাস করি, একটি শিশুর মানসিক, সামাজিক ও সৃজনশীল বিকাশের জন্য নিরাপদ, শান্তিপূর্ণ এবং শৃঙ্খলাপূর্ণ পরিবেশ অপরিহার্য। সেই লক্ষ্যকে সামনে রেখেই কদমহাটা জে.সি. একাডেমিতে শিক্ষাদান প্রক্রিয়া পরিচালিত হয়। আমাদের অভিজ্ঞ ও আন্তরিক শিক্ষকরা শিক্ষার্থীদের পাঠ্যবিষয় ছাড়াও তাদের চারিত্রিক গঠন, নৈতিকতা, নেতৃত্বগুণ, এবং ভাষাগত দক্ষতা বৃদ্ধিতে মনোযোগ দিয়ে থাকেন।
+            
+            শিক্ষার্থীদের শেখার আগ্রহকে উদ্দীপিত করার জন্য আমরা শ্রেণিকক্ষের পাঠদানের পাশাপাশি সহপাঠ কার্যক্রম, সৃজনশীল খেলা, গান, নাচ, গল্প বলা ও শিল্পকর্মের মতো কার্যক্রম অন্তর্ভুক্ত করেছি। এছাড়াও, একাডেমিতে প্রাথমিক স্তরের ইংরেজি ভাষা শিক্ষা এবং মৌলিক কম্পিউটার শিক্ষা প্রদান করা হয়, যা ভবিষ্যতের আধুনিক বিশ্বের সাথে শিক্ষার্থীদের মানিয়ে নিতে সহায়তা করে।
+            
+            আমাদের লক্ষ্য শুধু ভালো রেজাল্ট নয়, বরং শিশুদের এমনভাবে গড়ে তোলা—যাতে তারা আত্মবিশ্বাসী, সদাচারী এবং জ্ঞানপিপাসু মানুষ হিসেবে বেড়ে উঠতে পারে। কদমহাটা জে.সি. একাডেমি প্রত্যেক শিক্ষার্থীর সম্ভাবনাকে বাস্তবে রূপ দেওয়ার জন্য অঙ্গীকারবদ্ধ।</p>
+    </section>
+
+    <section class="secThree">
+        <h3>Opinions (মতামত)</h3>
+        <div class="textboxone">
+            <p>আমি কদমহাটা জে.সি. একাডেমির সভাপতি হিসেবে আপনাদের সকলকে আন্তরিক শুভেচ্ছা জানাচ্ছি। আমাদের একাডেমি শুরু থেকেই শিক্ষার্থীদের একটি নিরাপদ, শান্তিপূর্ণ এবং শৃঙ্খলাবদ্ধ পরিবেশে শিক্ষা প্রদানে প্রতিশ্রুতিবদ্ধ। আমি আশা করি, আমরা সকলেই একসাথে কাজ করে একাডেমিকে আরও উচ্চ শিখরে পৌঁছাতে সক্ষম হবো। শিক্ষার ক্ষেত্রে আমাদের অঙ্গীকার হলো মানসম্পন্ন শিক্ষা প্রদান করা, যেখানে শিশুদের সৃজনশীলতা, নৈতিকতা এবং জীবনের প্রতি ইতিবাচক দৃষ্টিভঙ্গি গড়ে তোলা হবে।</p>
+            <h4>এ এইচ এম মঈনুল ইসলাম (A H M Moinul islam)</h4>
+            <p>সভাপতি (President)</p>
+        </div>
+        <div class="textboxtow">
+            <p>আমাদের প্রিয় শিক্ষা প্রতিষ্ঠান কদমহাটা জে.সি. একাডেমির পক্ষ থেকে আমি আপনাদের সবাইকে জানাচ্ছি আন্তরিক শুভেচ্ছা ও অকৃত্রিম ভালোবাসা। এই একাডেমি তার সূচনালগ্ন থেকেই একটি মুক্তচিন্তা-ভিত্তিক, সহনশীল এবং উদ্ভাবনী শিক্ষার পরিবেশ গড়ে তোলার জন্য নিরলসভাবে কাজ করে যাচ্ছে। আমাদের মূল বিশ্বাস হলো—শিক্ষা শুধু পাঠ্যপুস্তকে সীমাবদ্ধ নয়; বরং প্রকৃত শিক্ষা হলো জীবনের নানা অভিজ্ঞতা, মূল্যবোধ, ও সৃজনশীল অনুশীলনের সমন্বয়।
+
+                আমরা প্রতিটি শিক্ষার্থীর মেধা ও ব্যক্তিত্ব বিকাশে সহায়ক এমন একটি পরিবেশ তৈরি করতে দৃঢ়প্রতিজ্ঞ, যেখানে তারা কেবল শ্রেণিকক্ষেই নয়, বরং সহ-পাঠ্য কার্যক্রম, নৈতিক শিক্ষা, প্রযুক্তি ব্যবহার ও নেতৃত্বগুণ অর্জনের মাধ্যমে একজন সম্পূর্ণ মানুষ হিসেবে গড়ে উঠতে পারে।</p>
+            <h4>রিঙ্কু চন্দ্র দাস (Rinku Chandra Das)</h4>
+            <p>প্রধান(Head)</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Student and Staff Info Section -->
+    <section class="secSix">
+        <h3>Current Information (বর্তমান তথ্য) </h3>
+        <div class="info-card">
+            <h4>Total Students (পূর্ণ ছাত্র ছাত্রী সংখ্যা) </h4>
+            <p>২২০ (220)</p>
+        </div>
+        <div class="info-card">
+            <h4>Total Staff (কর্মরত)</h4>
+            <p>১২ (12)</p>
+        </div>
+        <div class="info-card">
+            <h4>Academic Year (বর্ষ)</h4>
+            <p> ২০২৫-২০২৬ <br> (2025-2026) </p>
+        </div>
+    </section>
+
+    
+
+    <section class="secEight">
+        <h3> Students (ছাত্র/ছাত্রীর সংখ্যা) </h3>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <h4> কিন্ডারগার্টেন (Kinder Garden) </h4>
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+    
+            <div class="info-card">
+                <h4> নার্সারি (Nursery) </h4>
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+    
+            <div class="info-card">
+                <h4> শ্রেনী প্রথম (First Standard) </h4>
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+    
+            <div class="info-card">
+                <h4> শ্রেনী দ্বিতীয় (Second Standard)</h4>
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+            
+            <div class="info-card">
+                <h4> শ্রেনী তৃতীয় (Third Standard) </h4>
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+            
+            <div class="info-card">
+                <h4> শ্রেনী চতুর্থ (Forth Standard) </h4> 
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+
+            </div>
+            
+            <div class="info-card">
+                <h4> শ্রেনী পঞ্চম (Five Standard)</h4> 
+                <p> </p>
+                <button type="button"> <a href="#">ছাত্র ছাত্রীর তথ্য</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="secFour">
+        <h3>Notice (ঘোষণা)</h3>
+        <table>
+
+            <!-----<tr>
+                <td>   বিজয় দিবস (Victory Day) </td>
+                <td>১৬ ডিসেম্বর, ২০২৪  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            <tr>
+                <td>   বিজয় দিবস (Victory Day) </td>
+                <td>১৬ ডিসেম্বর, ২০২৪  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            
+            <tr>
+                <td>   বিজয় দিবস (Victory Day) </td>
+                <td>১৬ ডিসেম্বর, ২০২৪  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+
+            -->
+            
+            
+            <tr>
+                <td>  বাংলা নববর্ষ - Bengali New Year (Pohela Boishakh) </td>
+                <td>১৪ এপ্রিল, ২০২৫  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            
+            <tr>
+                <td> ঈদুল ফিতর (Eid-ul-Fitr Holidays)   </td>
+                <td> ২৯ মার্চ – ৬ এপ্রিল, ২০২৫ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            <tr>
+                <td>   স্বাধীনতা দিবস, শবে কদর ও জুমাতুল বিদা  </td>
+                <td>২৬, ২৭ ও ২৮ মার্চ, ২০২৫ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            <tr>
+                <td>   শবে বরাত (Shab-e-Barat) </td>
+                <td>১৫ ফেব্রুয়ারি, ২০২৫  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            <tr>
+                <td>   ইংরেজি নববর্ষ (New Year's Day) </td>
+                <td>১ জানুয়ারি, ২০২৫  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            
+            <tr>
+                <td>   বড়দিন (Christmas Day) </td>
+                <td> ২৫ ডিসেম্বর, ২০২৪  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+
+
+            <tr>
+                <td>   বিজয় দিবস (Victory Day) </td>
+                <td>১৬ ডিসেম্বর, ২০২৪  শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>দুর্গাপূজা (Durga Puja)  - </td>
+                <td> ২২, ২৩ অক্টোবর, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>রমজান ঈদ (Eid-ul-Fitr) </td>
+                <td> ১, ২ জুলাই, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+
+            <tr>
+                <td>বুদ্ধপূর্ণিমা (Buddha Purnima) </td>
+                <td>২৩ মে, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>বিশ্বমহান দিবস (May Day) - </td>
+                <td> ১ মে, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>পহেলা বৈশাখ (Pohela Boishakh) </td>
+                <td> ১৪ এপ্রিল, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>শহীদ দিবস (Language Movement Day)</td>
+                <td> ২১ ফেব্রুয়ারি, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>নতুন বছর </td>
+                <td>১ জানুয়ারি - ৫ জানুয়ারি, ২০২৪ শ্রেনী ও পাঠদান বন্ধ থাকবে।</td> 
+            </tr>
+
+            <tr>
+                <td>ক্রিসমাস ডে</td>
+                <td>২৫ ডিসেম্বর, ২০২৩ (খ্রিষ্টান সম্প্রদায়ের ধর্মীয় উৎসব) শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>দুর্গা পূজা</td>
+                <td>২৩-২৬ অক্টোবর, ২০২৩ (হিন্দু সম্প্রদায়ের সবচেয়ে বড় ধর্মীয় উৎসব) শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>ঈদ-এ-মিলাদুন্নবী</td>
+                <td>২৮ অক্টোবর, ২০২৩ (মুসলিম সম্প্রদায়ের কাছে হজরত মুহাম্মদ (সা.)-এর জন্ম ও মৃত্যু দিবস) শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>গুড ফ্রাইডে</td>
+                <td>7 এপ্রিল, ২০২৩ (খ্রিষ্টান সম্প্রদায়ের কাছে শোকের দিন) শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+            <tr>
+                <td>শব-এ-বরাত</td>
+                <td>7 মার্চ, ২০২৩ (মুসলিম সম্প্রদায়ের বরকত প্রার্থনার রাত) শ্রেনী ও পাঠদান বন্ধ থাকবে।</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <!-- Staff Section -->
+    <section class="secFive">
+        <h3>Our Staff (আমাদের স্টাফ)</h3>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.40.01_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Rinku Chandra Das</h4>
+            <p>Head</p>
+            <p>Period of Work: January 2022 - Present</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.39.59_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Ms Shaleha Akther Sumi</h4>
+            <p>Assistant Head</p>
+            <p>Period of Work: January 2022 - Present</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/Male_Emoji-02.jpg" alt="Profile Picture">
+            <h4>Samadur Rahman Chowdhury</h4>
+            <p>Accounts Assistant (Technical Support)</p>
+            <p>Period of Work: 2022 February - Leave</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.40.00_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Rohima kathun</h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: April 2022 - November 2024 </p>
+        </div>
+
+        
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.56.56_AM-removebg-preview.png" alt="Profile Picture">
+            <h4>Habiba Akther Kadija</h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: November 2023 - Present</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.39.59_AM__1_-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Fahmida Chowdhury Pinki</h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: April 2022 - September 2023</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.39.56_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Alifa Akther </h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: March 2022 - October 2023</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.39.57_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Ms Habiba Akther Dia</h4>
+            <p>Senior Assistant Teacher</p>
+            <p>Period of Work: March 2022 - Present</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_12.39.58_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Farjana Akther Seji</h4>
+            <p>Assistant Teacher</p>
+            <p>Period of Work: October 2023 - July 2024</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_1.33.11_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4>Fatema Akther Momi</h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: August 2024 - Present</p>
+        </div>
+        <div class="staff-card">
+            <img src="Image/WhatsApp_Image_2025-03-29_at_1.45.39_AM-removebg-preview (1).png" alt="Profile Picture">
+            <h4> Syeda Julekha Akther Juli</h4>
+            <p> Assistant Teacher</p>
+            <p>Period of Work: August 2024 - February 2025</p>
+        </div>
+       
+
+
+
+    </section>
+
+    <section class="secSeven">
+        <h3 style="color: white;">Contact Information (যোগাযোগের ঠিকানা)</h3>
+        <p><i class="fa fa-map-marker"></i> Address: West Kadamhata Bazar, Rajnagar, Moulvibazar</p>
+        <p><i class="fa fa-phone"></i> Contact No: + </p>
+        <p><i class="fa fa-envelope"></i> Email: </p>
+    </section>
+
+
+    <!-- News Scroll -->
+     <!-- <div class="news-scroll">
+        <marquee>Admission going on, collect the form physically.</marquee>
+    </div> -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Kadamhata J.C Academy. All rights reserved.</p>
+    </div>
+</body>
+</html>
